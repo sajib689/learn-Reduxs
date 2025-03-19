@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment } from "../Redux/CounterSlice";
+import { decrement, increment, incrementByAmount } from "../Redux/CounterSlice";
 
 
 const Counter = () => {
@@ -11,11 +11,15 @@ const Counter = () => {
     const handleDecrement = () => {
         dispatch(decrement());
     }
+    const handleMultiply = () => {
+        dispatch(incrementByAmount(2));
+    }
     return (
         <div>
             <h1>{count}</h1>
             <button  onClick={() => handleIncrement()}>Increment</button>
             <button onClick={() => handleDecrement()}>Decrement</button>
+            <button onClick={() => handleMultiply()}>Increment By Multiply</button>
         </div>
     );
 };
