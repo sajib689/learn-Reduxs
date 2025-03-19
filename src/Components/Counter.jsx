@@ -19,7 +19,7 @@ const Counter = () => {
             <h1>{count}</h1>
             <button  onClick={() => handleIncrement()}>Increment</button>
             <button onClick={() => handleDecrement()}>Decrement</button>
-            <button onClick={() => handleMultiply}>Increment By Multiply</button>
+            <button onClick={() => handleMultiply()}>Increment By Multiply</button>
         </div>
     );
 };
